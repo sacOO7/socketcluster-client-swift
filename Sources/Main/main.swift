@@ -1,6 +1,12 @@
 import Foundation
+import ScClient
 
-print ("Hi there people")
+var client = ScClient()
 
+client.connect()
 
-//{"event":"#handshake","data":{"authToken":null},"cid":1}
+while(true) {
+    RunLoop.current.run(until: Date())
+    usleep(10)
+}
+
