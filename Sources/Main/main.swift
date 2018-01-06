@@ -1,7 +1,7 @@
 import Foundation
 import ScClient
 
-var client = ScClient()
+var client = ScClient(url: "http://localhost:8000/socketcluster/")
 
 client.connect()
 

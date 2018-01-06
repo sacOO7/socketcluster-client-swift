@@ -1,9 +1,12 @@
 import Starscream
 import Foundation
 
+
 public class ScClient : WebSocketDelegate {
     
-    var socket = WebSocket(url: URL(string: "http://localhost:8000/socketcluster/")!)
+    var authToken : String?
+    var socket : WebSocket
+    var counter : AtomicInteger?
     
     public func websocketDidConnect(socket: WebSocket) {
         print("websocket is connected")
@@ -29,8 +32,10 @@ public class ScClient : WebSocketDelegate {
         print("Received data: \(data.count)")
     }
     
-    public init() {
-        
+    public init(url : String) {
+        counter = AtomicInteger()
+        authToken = nil
+        socket = WebSocket(url: URL(string: url)!)
         socket.delegate = self
     }
     
