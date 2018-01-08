@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "HandyJSON",
+        "repositoryURL": "https://github.com/alibaba/HandyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "68a3b0fbb0305efe9fcde4cb5b1318d41e50ad15",
+          "version": "1.8.0"
+        }
+      },
+      {
         "package": "SSCZLib",
         "repositoryURL": "https://github.com/daltoniam/zlib-spm.git",
         "state": {

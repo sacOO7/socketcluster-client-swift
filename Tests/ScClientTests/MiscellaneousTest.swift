@@ -11,12 +11,17 @@ class MiscellaneousTest: XCTestCase {
     
     func testShouldSerializeData() {
         let emitEvent = Model.getEmitEventObject(eventName: "chat", data: "My Sample Data" as AnyObject, messageId: 2)
-        let expectedData = "{\"event\":\"chat\",\"data\":\"My sample data\",\"cid\":2}"
-//        XCTAssertEqual(expectedData, JSONConverter.SerializeObject(object: emitEvent))
+        let expectedData = "{\"cid\":2,\"event\":\"chat\",\"data\":\"My Sample Data\"}"
+        XCTAssertEqual(expectedData, emitEvent.toJSONString())
     }
     
     func testShouldDeserializeData() {
-        
+        let jsonString = "{\"cid\":2,\"event\":\"chat\",\"data\":\"My Sample Data\"}"
+        if let emitEvent = EmitEvent.deserialize(from: jsonString) {
+            XCTAssertEqual(emitEvent.cid, 2)
+            XCTAssertEqual(emitEvent.data as? String, "My Sample Data")
+            XCTAssertEqual(emitEvent.event, "chat")
+        }
     }
     
     override func tearDown() {

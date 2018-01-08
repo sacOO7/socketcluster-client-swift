@@ -1,28 +1,83 @@
-struct EmitEvent {
-    var event: String
+import HandyJSON
+
+class EmitEvent: HandyJSON {
+    
+    var event: String!
     var data: AnyObject?
-    var cid: Int
+    var cid: Int!
+    
+    required init() {
+    }
+    
+    init(event: String, data: AnyObject?, cid : Int) {
+        self.event = event
+        self.data = data
+        self.cid = cid
+    }
+    
 }
 
-struct ReceiveEvent {
+class ReceiveEvent : HandyJSON {
     var data : AnyObject?
     var error : AnyObject?
-    var rid : Int
+    var rid : Int!
+
+    
+    convenience init(data : AnyObject? , error : AnyObject?, rid : Int) {
+        self.init()
+        self.data = data
+        self.error = error
+        self.rid = rid
+    }
+    
+    required init() {
+    }
 }
 
-struct Channel {
-    var channel : String
+class Channel : HandyJSON{
+    var channel : String!
     var data : AnyObject?
+    
+    
+    
+    init(channel : String, data : AnyObject?) {
+        self.channel = channel
+        self.data = data
+    }
+    
+    required init() {
+    }
 }
 
-struct AuthData {
+class AuthData : HandyJSON{
     var authToken : String?
+    
+    
+    init(authToken : String?) {
+        self.authToken = authToken
+    }
+    
+    required init() {
+    }
 }
 
-struct HandShake  {
-    var event : String
-    var data  : AuthData
-    var cid   : Int
+class HandShake  : HandyJSON {
+
+    
+    var event : String!
+    var data  : AuthData!
+    var cid   : Int!
+
+    
+    init(event : String, data : AuthData, cid : Int) {
+        self.event = event
+        self.data = data
+        self.cid = cid
+    }
+    
+    required init() {
+    }
+    
 }
 
 class Model  {
@@ -35,14 +90,16 @@ class Model  {
         return ReceiveEvent(data: data, error: error, rid: messageId)
     }
     
-//    public static func getChannelObject (data : AnyObject?) -> Channel {
-//        
-//    }
+    public static func getChannelObject (data : AnyObject?) -> Channel? {
+        if let channel = data as? [String : Any] {
+            return Channel(channel: channel["channel"] as! String, data: channel["data"] as AnyObject)
+        }
+        return nil
+    }
     
     public static func getSubscribeEventObject(channelName : String, messageId : Int) -> EmitEvent{
         return EmitEvent(event: "#subscribe", data: Channel(channel: channelName, data :nil) as AnyObject, cid: messageId)
     }
-    
     
     public static func getUnsubscribeEventObject(channelName : String, messageId : Int) -> EmitEvent{
         return EmitEvent(event: "#unsubscribe", data: Channel(channel: channelName, data :nil) as AnyObject, cid: messageId)
@@ -55,6 +112,5 @@ class Model  {
     public static func getHandshakeObject(authToken : String?, messageId : Int) -> HandShake{
         return HandShake(event: "#handshake", data: AuthData(authToken: authToken), cid: messageId)
     }
-    
-    
+   
 }
