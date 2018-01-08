@@ -17,13 +17,13 @@ class UtilsTest: XCTestCase {
         counter = AtomicInteger()
     }
 
-    func ShouldIncrementCounterByOne() {
+    func testShouldIncrementCounterByOne() {
         XCTAssertEqual(counter.incrementAndGet(), 1);
     }
     
-    func ShouldDecrementCounterByOne() {
+    func testShouldDecrementCounterByOne() {
         counter.value = 2
-        XCTAssertEqual(counter.incrementAndGet(), 1);
+        XCTAssertEqual(counter.decrementAndGet(), 1);
     }
     
     override func tearDown() {
