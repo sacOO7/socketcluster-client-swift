@@ -15,6 +15,19 @@ public class ScClient : WebSocketDelegate {
     var onSetAuthentication : ((ScClient, String?)-> Void)?
     var onAuthentication : ((ScClient, Bool?)-> Void)?
     
+    
+    
+    public func setBasicListener(onConnect : ((ScClient)-> Void)?, onConnectError : ((ScClient, Error?)-> Void)?, onDisconnect : ((ScClient, Error?)-> Void)?) {
+        self.onConnect = onConnect
+        self.onDisconnect = onDisconnect
+        self.onConnectError = onConnectError
+    }
+    
+    public func setAuthenticationListener (onSetAuthentication : ((ScClient, String?)-> Void)?, onAuthentication : ((ScClient, Bool?)-> Void)?) {
+        self.onSetAuthentication = onSetAuthentication
+        self.onAuthentication = onAuthentication
+    }
+    
     public func websocketDidConnect(socket: WebSocket) {
         onConnect?(self)
         self.sendHandShake()
@@ -28,6 +41,32 @@ public class ScClient : WebSocketDelegate {
         print("got some text: \(text)")
         if (text == "#1") {
             socket.write(string: "#2")
+        } else {
+            if let messageObject = JSONConverter.deserializeString(message: text) {
+                if let (data, rid, cid, eventName, error) = Parser.getMessageDetails(myMessage: messageObject) {
+                    
+                    let parseResult = Parser.parse(rid: rid, cid: cid, event: eventName)
+                    
+                    switch parseResult {
+                        
+                    case .isAuthenticated:
+                        let isAuthenticated = ClientUtils.getIsAuthenticated(message: messageObject)
+                        onAuthentication?(self, isAuthenticated)
+                    case .publish:
+                        break
+                    case .removeToken:
+                        break
+                    case .setToken:
+                        authToken = ClientUtils.getAuthToken(message: messageObject)
+                        self.onSetAuthentication?(self, authToken)
+                    case .event:
+                        break
+                    case .ackReceive:
+                        break
+                    }
+                    
+                }
+            }
         }
     }
     

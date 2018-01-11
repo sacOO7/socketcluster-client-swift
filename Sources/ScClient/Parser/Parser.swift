@@ -9,7 +9,7 @@ public enum MessageType {
 
 public class Parser {
     
-    public static func parse(rid : Int, cid : Int, event : String?) -> MessageType {
+    public static func parse(rid : Int?, cid : Int?, event : String?) -> MessageType {
         if (event != nil) {
             if (event == "#publish") {
                 return MessageType.publish
