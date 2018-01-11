@@ -44,7 +44,7 @@ class ParserTest: XCTestCase {
     
     func testShouldReturnMessageDetails() {
         let message = "{\"event\":\"#removeAuthToken\",\"data\":\"This is a sample data\",\"cid\":1, \"rid\":2, \"error\":\"This is a sample error\"}"
-        let messageObject = JSONConverter.DeserializeString(message: message)
+        let messageObject = JSONConverter.deserializeString(message: message)
         
         if let result = Parser.getMessageDetails(myMessage: messageObject as Any) {
             XCTAssertEqual( "This is a sample data", result.data as! String)
