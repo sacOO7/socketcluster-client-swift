@@ -2,7 +2,7 @@ import Starscream
 import Foundation
 
 
-public class ScClient : WebSocketDelegate {
+public class ScClient : Listener, WebSocketDelegate {
     
     var authToken : String?
     var url : String?
@@ -75,9 +75,10 @@ public class ScClient : WebSocketDelegate {
     }
     
     public init(url : String) {
-        counter = AtomicInteger()
-        authToken = nil
-        socket = WebSocket(url: URL(string: url)!)
+        self.counter = AtomicInteger()
+        self.authToken = nil
+        self.socket = WebSocket(url: URL(string: url)!)
+        super.init()
         socket.delegate = self
     }
     
@@ -88,6 +89,15 @@ public class ScClient : WebSocketDelegate {
     private func sendHandShake() {
         let handshake = Model.getHandshakeObject(authToken: self.authToken, messageId: counter.incrementAndGet())
         socket.write(string: handshake.toJSONString()!)
+    }
+    
+    private func ack(cid : Int) -> (Any?, Any?) -> Void {
+        return  {
+            (error : Any?, data : Any?) in
+            let ackObject = Model.getReceiveEventObject(data: data as AnyObject, error: error as AnyObject, messageId: cid)
+            let ackData = JSONConverter.serializeObject(object: ackObject)
+            self.socket.write(string: ackData!)
+        }
     }
     
     public func disconnect() {
