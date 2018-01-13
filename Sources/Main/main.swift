@@ -10,7 +10,7 @@ var onConnect = {
 
 var onDisconnect = {
     (client :ScClient, error : Error?) in
-        print("Disconnected from server due to ", error?.localizedDescription)
+    print("Disconnected from server due to ", error?.localizedDescription)
 }
 
 var onAuthentication = {
@@ -21,19 +21,33 @@ var onAuthentication = {
 var onSetAuthentication = {
     (client : ScClient, token : String?) in
     print("Token is ", token)
-    client.emitAck(eventName: "chat", data: "This is my sample data" as AnyObject, ack : {
-        (eventName : String, error : AnyObject? , data : AnyObject?) in
-        print("Got data for eventName", eventName, " error is ", error, " data is ", data)
+    client.subscribeAck(channelName: "yell", ack : {
+        (channelName : String, error : AnyObject?, data : AnyObject?) in
+        if (error is NSNull) {
+            print("Successfully subscribed to channel ", channelName)
+        } else {
+            print("Got error while subscribing ", error)
+        }
+        
+    })
+    
+    client.publishAck(channelName: "yell", data: "I am sending data to yell" as AnyObject, ack : {
+        (channelName : String, error : AnyObject?, data : AnyObject?) in
+        if (error is NSNull) {
+            print("Successfully published to channel ", channelName)
+        }else {
+             print("Got error while publishing ", error)
+        }
         
     })
 }
 
 client.setBasicListener(onConnect: onConnect, onConnectError: nil, onDisconnect: onDisconnect)
 client.setAuthenticationListener(onSetAuthentication: onSetAuthentication, onAuthentication: onAuthentication)
-client.onAck(eventName: "yell", ack: {
-    (eventName : String, data : AnyObject?, ack : (AnyObject?, AnyObject?) -> Void) in
-    print("Got data for eventName ", eventName, " data is ", data)
-    ack(nil, nil)
+
+client.onChannel(channelName: "yell", ack: {
+    (channelName : String , data : AnyObject?) in
+    print ("Got data for channel", channelName, " object data is ", data)
 })
 
 client.connect()

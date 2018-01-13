@@ -53,7 +53,6 @@ public class ScClient : Listener, WebSocketDelegate {
                         let isAuthenticated = ClientUtils.getIsAuthenticated(message: messageObject)
                         onAuthentication?(self, isAuthenticated)
                     case .publish:
-                        
                         if let channel = Model.getChannelObject(data: data as AnyObject) {
                             handleOnListener(eventName: channel.channel, data: channel.data as AnyObject)
                         }
@@ -62,16 +61,16 @@ public class ScClient : Listener, WebSocketDelegate {
                     case .setToken:
                         authToken = ClientUtils.getAuthToken(message: messageObject)
                         self.onSetAuthentication?(self, authToken)
+                    case .ackReceive:
+                        
+                        handleEmitAck(id: rid!, error: error as AnyObject, data: data as AnyObject)
                     case .event:
                         if hasEventAck(eventName: eventName!) {
                             handleOnAckListener(eventName: eventName!, data: data as AnyObject, ack: self.ack(cid: cid!))
                         } else {
                             handleOnListener(eventName: eventName!, data: data as AnyObject)
                         }
-                        break
-                    case .ackReceive:
-                        handleEmitAck(id: rid!, error: error as AnyObject, data: data as AnyObject)
-                        break
+                    
                     }
                     
                 }
