@@ -139,7 +139,7 @@ The object received can be String, Boolean, Int or Object
         
 ```
 
-<!---
+
 
 Implementing Pub-Sub via channels
 ---------------------------------
@@ -148,14 +148,17 @@ Implementing Pub-Sub via channels
 
 - For creating and subscribing to channels:
 
-```go
+```swift 
     // without acknowledgement
-    client.Subscribe("mychannel")
+    client.subscribe(channelName: "yell")
     
     //with acknowledgement
-    client.SubscribeAck("mychannel", func(channelName string, error interface{}, data interface{}) {
-        if error == nil {
-            fmt.Println("Subscribed to channel ", channelName, "successfully")
+    client.subscribeAck(channelName: "yell", ack : {
+        (channelName : String, error : AnyObject?, data : AnyObject?) in
+        if (error is NSNull) {
+            print("Successfully subscribed to channel ", channelName)
+        } else {
+            print("Got error while subscribing ", error)
         }
     })
 ```
@@ -165,42 +168,48 @@ Implementing Pub-Sub via channels
 
 - For publishing event :
 
-```go
+```swift
 
-       // without acknowledgement
-       client.Publish("mychannel", "This is a data to be published")
+	// without acknowledgement
+	client.publish(channelName: "yell", data: "I am sending data to yell" as AnyObject)
 
-       
-       // with acknowledgement
-       client.PublishAck("mychannel", "This is a data to be published", func(channelName string, error interface{}, data interface{}) {
-       		if error == nil {
-       			fmt.Println("Data published successfully to channel ", channelName)
-       		}
-       	})
+
+	// with acknowledgement
+	client.publishAck(channelName: "yell", data: "I am sending data to yell" as AnyObject, ack : {
+		(channelName : String, error : AnyObject?, data : AnyObject?) in
+		if (error is NSNull) {
+		     print("Successfully published to channel ", channelName)
+		}else {
+		     print("Got error while publishing ", error)
+		}
+	})
 ``` 
  
 #### Listening to channel
 
 - For listening to channel event :
 
-```go
-        client.OnChannel("mychannel", func(channelName string, data interface{}) {
-        		fmt.Println("Got data ", data, " for channel ", channelName)
-        })
-    
+```swift
+        client.onChannel(channelName: "yell", ack: {
+    		(channelName : String , data : AnyObject?) in
+    		print ("Got data for channel", channelName, " object data is ", data)
+	})
 ``` 
      
 #### Un-subscribing to channel
 
-```go
-         // without acknowledgement
-        client.Unsubscribe("mychannel")
-         
-         // with acknowledgement
-        client.UnsubscribeAck("mychannel", func(channelName string, error interface{}, data interface{}) {
-            if error == nil {
-                fmt.Println("Unsubscribed to channel ", channelName, "successfully")
-            }
-        })
+```swift
+    // without acknowledgement
+    client.unsubscribe(channelName: "yell")
+    
+    //with acknowledgement
+    client.unsubscribeAck(channelName: "yell", ack : {
+        (channelName : String, error : AnyObject?, data : AnyObject?) in
+        if (error is NSNull) {
+            print("Successfully unsubscribed to channel ", channelName)
+        } else {
+            print("Got error while unsubscribing ", error)
+        }
+    })
 ```
---->
+
