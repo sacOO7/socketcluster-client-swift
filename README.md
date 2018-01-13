@@ -76,15 +76,15 @@ Create instance of `scclient` by passing url of socketcluster-server end-point
         }
         
 ```
-<!---
+
 
 #### Connecting to server
 
 - For connecting to server:
 
-```go
+```swift 
     //This will send websocket handshake request to socketcluster-server
-    client.Connect()
+    client.connect()
 ```
 
 Emitting and listening to events
@@ -93,24 +93,26 @@ Emitting and listening to events
 
 - eventname is name of event and message can be String, boolean, int or structure
 
-```go
+```swift
 
-    client.Emit(eventname,message);
-        
-    //  client.Emit("chat","This is a sample message")
+    client.emit(eventName: eventname, data: message as AnyObject)
+    
+  //client.emit(eventName: "chat", data: "This is my sample message" as AnyObject)
+  
 ```
 
 - To send event with acknowledgement
 
-```go
+```swift
 
-	client.EmitAck("chat","This is a sample message", func(eventName string, error interface{}, data interface{}) {
-		if error == nil {
-			fmt.Println("Got ack for emit event with data ", data, " and error ", error)
-		}
-	})
+    client.emitAck(eventName: "chat", data: "This is my sample message" as AnyObject, ack : {
+    	    (eventName : String, error : AnyObject? , data : AnyObject?) in
+            print("Got data for eventName ", eventName, " error is ", error, " data is ", data)  
+    })
 	
 ```
+
+<!---
 
 #### Event Listener
 
