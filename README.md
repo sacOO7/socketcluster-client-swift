@@ -91,7 +91,7 @@ Emitting and listening to events
 --------------------------------
 #### Event emitter
 
-- eventname is name of event and message can be String, boolean, int or structure
+- eventname is name of event and message can be String, boolean, Int or Object
 
 ```swift
 
@@ -112,33 +112,34 @@ Emitting and listening to events
 	
 ```
 
-<!---
-
 #### Event Listener
 
 - For listening to events :
 
-The object received can be String, Boolean, Long or GO structure.
+The object received can be String, Boolean, Int or Object
 
-```go
+```swift
     // Receiver code without sending acknowledgement back
-    client.On("chat", func(eventName string, data interface{}) {
-		fmt.Println("Got data ", data, " for event ", eventName)
-	})
+    client.on(eventName: "yell", ack: {
+    	    (eventName : String, data : AnyObject?) in
+            print("Got data for eventName ", eventName, " data is ", data)
+    })
     
 ```
 
 - To send acknowledgement back to server
 
-```go
+```swift
     // Receiver code with ack
-	client.OnAck("chat", func(eventName string, data interface{}, ack func(error interface{}, data interface{})) {
-		fmt.Println("Got data ", data, " for event ", eventName)
-		fmt.Println("Sending back ack for the event")
-		ack("This is error", "This is data")
-	}) 
+    client.onAck(eventName: "yell", ack: {
+            (eventName : String, data : AnyObject?, ack : (AnyObject?, AnyObject?) -> Void) in
+            print("Got data for eventName ", eventName, " data is ", data)
+            ack("This is error " as AnyObject, "This is data " as AnyObject)
+    })
         
 ```
+
+<!---
 
 Implementing Pub-Sub via channels
 ---------------------------------
