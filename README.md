@@ -10,13 +10,28 @@ This client provides following functionality
 - Pub/sub
 - Authentication (JWT)
 
-<!---
-To install use
 
- ```markdown
-    go get github.com/sacOO7/socketcluster-client-go/scclient
+Installation and Use
+--------------------
+- To install add this to depedencies section of Package.swift
+
+ ```swift
+     dependencies: [
+     	// other dependencies 
+    	.package(url: "https://github.com/sacOO7/socketcluster-client-swift", from: "1.0.0")
+	]
  ```
- --->
+- To use the library add this to target dependencies
+
+ ```swift
+    targets: [
+        .target(
+            name: "tool",
+            dependencies: [
+                "ScClient"
+            ])
+    ]
+ ```
 
 Description
 -----------
