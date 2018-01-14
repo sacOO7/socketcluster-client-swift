@@ -18,7 +18,7 @@ Installation and Use
  ```swift
      dependencies: [
      	// other dependencies 
-    	.package(url: "https://github.com/sacOO7/socketcluster-client-swift", from: "1.0.0")
+    	.package(url: "https://github.com/sacOO7/ScClient", from: "1.0.0")
 	]
  ```
 - To use the library add this to target dependencies
