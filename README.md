@@ -13,6 +13,15 @@ This client provides following functionality
 
 Installation and Use
 --------------------
+
+### [CocoaPods](http://cocoapods.org)
+
+```ruby
+pod 'ScClient', :git => 'https://github.com/sacOO7/socketcluster-client-swift.git'
+```
+
+### Swift Package Manager
+
 - To install add this to depedencies section of Package.swift
 
  ```swift
