@@ -10,6 +10,12 @@ This client provides following functionality
 - Pub/sub
 - Authentication (JWT)
 
+Client supports following platforms
+
+- iOS >= 8.0
+- osX >= 10.10
+- watchOS >= 2.0
+- tvOS >= 9.0 
 
 Installation and Use
 --------------------
