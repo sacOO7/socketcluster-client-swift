@@ -6,7 +6,7 @@ public class ScClient : Listener, WebSocketDelegate {
     
     var authToken : String?
     var url : String?
-    var socket : WebSocket
+    var socket : WebSocketClient
     var counter : AtomicInteger
     
     var onConnect : ((ScClient)-> Void)?
@@ -28,16 +28,16 @@ public class ScClient : Listener, WebSocketDelegate {
         self.onAuthentication = onAuthentication
     }
     
-    public func websocketDidConnect(socket: WebSocket) {
+    public func websocketDidConnect(socket: WebSocketClient) {
         onConnect?(self)
         self.sendHandShake()
     }
     
-    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+    public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         onDisconnect?(self, error)
     }
     
-    public func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+    public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         print("got some text: \(text)")
         if (text == "#1") {
             socket.write(string: "#2")
@@ -78,7 +78,7 @@ public class ScClient : Listener, WebSocketDelegate {
         }
     }
     
-    public func websocketDidReceiveData(socket: WebSocket, data: Data) {
+    public func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         print("Received data: \(data.count)")
     }
     
