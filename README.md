@@ -23,7 +23,7 @@ Installation and Use
 ### [CocoaPods](http://cocoapods.org)
 
 ```ruby
-pod 'ScClient', :git => 'https://github.com/sacOO7/socketcluster-client-swift.git'
+pod 'ScClient'
 ```
 
 ### Swift Package Manager
