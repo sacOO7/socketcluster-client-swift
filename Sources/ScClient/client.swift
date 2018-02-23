@@ -6,7 +6,7 @@ public class ScClient : Listener, WebSocketDelegate {
     
     var authToken : String?
     var url : String?
-    var socket : WebSocketClient
+    var socket : WebSocket
     var counter : AtomicInteger
     
     var onConnect : ((ScClient)-> Void)?
@@ -90,8 +90,32 @@ public class ScClient : Listener, WebSocketDelegate {
         socket.delegate = self
     }
     
+    public init(urlRequest : URLRequest) {
+        self.counter = AtomicInteger()
+        self.authToken = nil
+        self.socket = WebSocket(request: urlRequest)
+        super.init()
+        socket.delegate = self
+    }
+    
+    public init(urlRequest : URLRequest, protocols : [String]?) {
+        self.counter = AtomicInteger()
+        self.authToken = nil
+        self.socket = WebSocket(request: urlRequest, protocols : protocols)
+        super.init()
+        socket.delegate = self
+    }
+    
     public func connect() {
         socket.connect()
+    }
+    
+    public func isConnected() -> Bool{
+        return socket.isConnected;
+    }
+    
+    public func setBackgroundQueue(queueName : String) {
+        socket.callbackQueue = DispatchQueue(label: queueName)
     }
     
     private func sendHandShake() {
@@ -169,6 +193,10 @@ public class ScClient : Listener, WebSocketDelegate {
     
     public func disconnect() {
         socket.disconnect()
+    }
+    
+    public func disableSSLVerification(value : Bool) {
+        socket.disableSSLCertValidation = value
     }
 }
 
