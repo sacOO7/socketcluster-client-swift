@@ -117,6 +117,14 @@ Create instance of `scclient` by passing url of socketcluster-server end-point
     client.connect()
 ```
 
+#### Getting connection status
+
+```swift 
+    //This will send websocket handshake request to socketcluster-server
+    var status = client.isConnected()
+```
+
+
 Emitting and listening to events
 --------------------------------
 #### Event emitter
@@ -241,5 +249,12 @@ Implementing Pub-Sub via channels
             print("Got error while unsubscribing ", error)
         }
     })
+```
+
+#### Disable SSL Certificate Verification
+
+```swift
+	var client = ScClient(url: "http://localhost:8000/socketcluster/")
+        client.disableSSLVerification(true)
 ```
 
