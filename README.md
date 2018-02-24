@@ -257,4 +257,46 @@ Implementing Pub-Sub via channels
 	var client = ScClient(url: "http://localhost:8000/socketcluster/")
         client.disableSSLVerification(true)
 ```
+### Custom Queue
 
+A custom queue can be specified when delegate methods are called. By default `DispatchQueue.main` is used, thus making all delegate methods calls run on the main thread. It is important to note that all WebSocket processing is done on a background thread, only the delegate method calls are changed when modifying the queue. The actual processing is always on a background thread and will not pause your app.
+
+```swift
+	var client = ScClient(url: "http://localhost:8000/socketcluster/")
+	//create a custom queue
+	client.setBackgroundQueue(queueName : "com.example.chatapp")
+```
+
+### Custom Headers
+
+You can also override the default websocket headers with your own custom ones like so:
+
+```swift
+	var request = URLRequest(url: URL(string: "http://localhost:8000/socketcluster/")!)
+	request.timeoutInterval = 5
+	request.setValue("someother protocols", forHTTPHeaderField: "Sec-WebSocket-Protocol")
+	request.setValue("14", forHTTPHeaderField: "Sec-WebSocket-Version")
+	request.setValue("Everything is Awesome!", forHTTPHeaderField: "My-Awesome-Header")
+	var client = ScClient(URLRequest: request)
+```
+
+### Custom HTTP Method
+
+Your server may use a different HTTP method when connecting to the websocket:
+
+```swift
+	var request = URLRequest(url: URL(string: "http://localhost:8000/socketcluster/")!)
+	request.httpMethod = "POST"
+	request.timeoutInterval = 5
+	var client = ScClient(URLRequest: request)
+```
+
+### Protocols
+
+If you need to specify a protocol, simple add it to the init:
+
+```swift
+	//chat and superchat are the example protocols here
+	var request = URLRequest(url: URL(string: "http://localhost:8000/socketcluster/")!)
+	var client = ScClient(URLRequest: request, protocols: ["chat","superchat"])
+```
