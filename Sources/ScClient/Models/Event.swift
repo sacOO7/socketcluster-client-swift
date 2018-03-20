@@ -51,7 +51,7 @@ class Channel : HandyJSON{
 
 class SphereChannel : HandyJSON{
   var channel : String!
-  var data : Data?
+  var data : ChannelData?
   
   init(channel : String, token: String) {
     self.channel = channel
