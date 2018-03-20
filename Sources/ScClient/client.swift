@@ -148,9 +148,9 @@ public class ScClient : Listener, WebSocketDelegate {
       self.socket.write(string : subscribeObject.toJSONString()!)
     }
     
-    public func subscribeAck(channelName : String, ack : @escaping (String, AnyObject?, AnyObject?)-> Void) {
+    public func subscribeAck(channelName : String, token: String, ack : @escaping (String, AnyObject?, AnyObject?)-> Void) {
         let id = counter.incrementAndGet()
-        let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: id)
+        let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: id, token: token)
         putEmitAck(id: id, eventName: channelName, ack: ack)
         self.socket.write(string : subscribeObject.toJSONString()!)
     }
