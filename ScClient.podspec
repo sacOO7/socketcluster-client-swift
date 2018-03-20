@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.name         = "ScClient"
   s.version      = "1.0.2"
   s.summary      = "A socketcluster client for iOS and OSX."
-  s.swift_version = '3.2'
+  s.swift_version = '4.0'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -137,5 +137,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Starscream", "~> 3.0.4"
-  s.dependency "HandyJSON", "~> 1.8.0"
+  s.dependency "HandyJSON", "~> 4.0.0-beta.1"
 end
