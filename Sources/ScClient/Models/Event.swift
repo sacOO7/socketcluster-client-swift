@@ -63,8 +63,7 @@ class SphereChannel : HandyJSON{
 }
 
 class ChannelData: HandyJSON {
-  
-  let jwt: String
+  var jwt: String?
   
   init(jwt: String) {
     self.jwt = jwt
@@ -73,6 +72,7 @@ class ChannelData: HandyJSON {
   required init() {
   }
 }
+
 
 class AuthData : HandyJSON{
     var authToken : String?
