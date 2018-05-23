@@ -29,8 +29,9 @@ public class ScClient : Listener, WebSocketDelegate {
     }
     
     public func websocketDidConnect(socket: WebSocketClient) {
-        onConnect?(self)
+        counter.value = 0
         self.sendHandShake()
+        onConnect?(self)
     }
     
     public func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
@@ -199,6 +200,4 @@ public class ScClient : Listener, WebSocketDelegate {
         socket.disableSSLCertValidation = value
     }
 }
-
-
 

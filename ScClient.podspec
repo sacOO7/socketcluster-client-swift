@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ScClient"
-  s.version      = "1.0.2"
+  s.version      = “1.0.4”
   s.summary      = "A socketcluster client for iOS and OSX."
   s.swift_version = '3.2'
 

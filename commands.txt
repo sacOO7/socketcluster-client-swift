@@ -1,0 +1,30 @@
+### Swift Package Manager
+
+swift package init — type=library
+open -a Xcode Package.swift
+swift package resolve
+swift package build
+swift package test
+swift package generate-xcodeproj
+swift build
+git tag -a 1.0.3 -m "added support for setting background queue, set custom request headers and connection status"
+swift build clean
+swift build test
+
+
+### Cocoa Pod
+
+sudo gem install cocoapods
+pod --version
+pod install
+pod setup
+pod update
+sudo rm -fr ~/.cocoapods/repos/master
+pod spec create —help
+pod spec create https://github.com/sacOO7/ScClient
+pod spec create ScClient
+open -a Xcode ScClient.podspec
+// Register trunk here with proper description
+pod spec lint ScClient.podspec --allow-warnings
+pod trunk push ScClient.podspec --allow-warnings
+
