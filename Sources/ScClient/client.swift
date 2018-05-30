@@ -39,7 +39,6 @@ public class ScClient : Listener, WebSocketDelegate {
     }
     
     public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        print("got some text: \(text)")
         if (text == "#1") {
             socket.write(string: "#2")
         } else {
