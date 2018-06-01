@@ -39,7 +39,6 @@ public class ScClient : Listener, WebSocketDelegate {
     }
     
     public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        print("got some text: \(text)")
         if (text == "#1") {
             socket.write(string: "#2")
         } else {
@@ -144,14 +143,14 @@ public class ScClient : Listener, WebSocketDelegate {
         self.socket.write(string : emitObject.toJSONString()!)
     }
     
-    public func subscribe(channelName : String) {
-        let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: counter.incrementAndGet())
-        self.socket.write(string : subscribeObject.toJSONString()!)
+    public func subscribe(channelName : String, token: String) {
+      let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: counter.incrementAndGet(), token: token)
+      self.socket.write(string : subscribeObject.toJSONString()!)
     }
     
-    public func subscribeAck(channelName : String, ack : @escaping (String, AnyObject?, AnyObject?)-> Void) {
+    public func subscribeAck(channelName : String, token: String, ack : @escaping (String, AnyObject?, AnyObject?)-> Void) {
         let id = counter.incrementAndGet()
-        let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: id)
+        let subscribeObject = Model.getSubscribeEventObject(channelName: channelName, messageId: id, token: token)
         putEmitAck(id: id, eventName: channelName, ack: ack)
         self.socket.write(string : subscribeObject.toJSONString()!)
     }

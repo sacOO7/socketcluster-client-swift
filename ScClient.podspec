@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.name         = "ScClient"
   s.version      = "1.0.6"
   s.summary      = "A socketcluster client for iOS and OSX."
-  s.swift_version = '3.2'
+  s.swift_version = '4.0'
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -84,7 +84,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/sacOO7/socketcluster-client-swift.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/heysphere/socketcluster-client-swift.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
