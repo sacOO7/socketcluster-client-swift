@@ -137,5 +137,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "Starscream", "~> 3.0.4"
-  s.dependency "HandyJSON", "~> 1.8.0"
+  s.dependency "HandyJSON", "~> 4.1.0"
 end
