@@ -21,7 +21,6 @@ class ReceiveEvent : HandyJSON {
     var data : AnyObject?
     var error : AnyObject?
     var rid : Int!
-
     
     convenience init(data : AnyObject? , error : AnyObject?, rid : Int) {
         self.init()
@@ -38,11 +37,33 @@ class Channel : HandyJSON{
     var channel : String!
     var data : AnyObject?
     
-    
-    
     init(channel : String, data : AnyObject?) {
         self.channel = channel
         self.data = data
+    }
+    
+    required init() {
+    }
+}
+
+class AuthChannel : HandyJSON{
+    var channel : String!
+    var data : ChannelData?
+    
+    init(channel : String, token: String?) {
+        self.channel = channel
+        self.data = ChannelData(jwt: token)
+    }
+    
+    required init() {
+    }
+}
+
+class ChannelData: HandyJSON {
+    var jwt: String?
+    
+    init(jwt: String?) {
+        self.jwt = jwt
     }
     
     required init() {
@@ -99,6 +120,10 @@ class Model  {
     
     public static func getSubscribeEventObject(channelName : String, messageId : Int) -> EmitEvent{
         return EmitEvent(event: "#subscribe", data: Channel(channel: channelName, data :nil) as AnyObject, cid: messageId)
+    }
+    
+    public static func getSubscribeEventObject(channelName : String, messageId : Int, token: String? = nil) -> EmitEvent{
+        return EmitEvent(event: "#subscribe", data: AuthChannel(channel: channelName, token: token) as AnyObject, cid: messageId)
     }
     
     public static func getUnsubscribeEventObject(channelName : String, messageId : Int) -> EmitEvent{
