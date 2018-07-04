@@ -96,7 +96,7 @@ public class ScClient : Listener, WebSocketDelegate {
         socket.delegate = self
     }
     
-    public init(urlRequest : URLRequest, authToken : String? = nil, protocols : [String]?) {
+    public init(urlRequest : URLRequest, authToken : String? = nil, protocols : [String]? = nil) {
         self.counter = AtomicInteger()
         self.authToken = authToken
         self.socket = WebSocket(request: urlRequest, protocols : protocols)
