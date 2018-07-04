@@ -15,7 +15,13 @@ public class ScClient : Listener, WebSocketDelegate {
     var onSetAuthentication : ((ScClient, String?)-> Void)?
     var onAuthentication : ((ScClient, Bool?)-> Void)?
     
+    public func setAuthToken(token : String) {
+        self.authToken = token
+    }
     
+    public func getAuthToken () -> String?{
+        return self.authToken
+    }
     
     public func setBasicListener(onConnect : ((ScClient)-> Void)?, onConnectError : ((ScClient, Error?)-> Void)?, onDisconnect : ((ScClient, Error?)-> Void)?) {
         self.onConnect = onConnect
@@ -82,25 +88,17 @@ public class ScClient : Listener, WebSocketDelegate {
         print("Received data: \(data.count)")
     }
     
-    public init(url : String) {
+    public init(url : String, authToken : String? = nil) {
         self.counter = AtomicInteger()
-        self.authToken = nil
+        self.authToken = authToken
         self.socket = WebSocket(url: URL(string: url)!)
         super.init()
         socket.delegate = self
     }
     
-    public init(urlRequest : URLRequest) {
+    public init(urlRequest : URLRequest, authToken : String? = nil, protocols : [String]? = nil) {
         self.counter = AtomicInteger()
-        self.authToken = nil
-        self.socket = WebSocket(request: urlRequest)
-        super.init()
-        socket.delegate = self
-    }
-    
-    public init(urlRequest : URLRequest, protocols : [String]?) {
-        self.counter = AtomicInteger()
-        self.authToken = nil
+        self.authToken = authToken
         self.socket = WebSocket(request: urlRequest, protocols : protocols)
         super.init()
         socket.delegate = self
