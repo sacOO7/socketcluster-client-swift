@@ -196,5 +196,11 @@ public class ScClient : Listener, WebSocketDelegate {
     public func disableSSLVerification(value : Bool) {
         socket.disableSSLCertValidation = value
     }
+    
+    // The usePublicKeys bool is whether to use the certificates for validation or the public keys. The public keys will be extracted from the certificates automatically if usePublicKeys is choosen.
+    public func loadSSLCertificateFromData(data : Data, usePublicKeys : Bool = false) {
+        socket.security = SSLSecurity(certs: [SSLCert(data: data)], usePublicKeys: usePublicKeys)
+    }
+    
 }
 
