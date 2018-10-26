@@ -224,5 +224,18 @@ public class ScClient : Listener, WebSocketDelegate {
         socket.enabledSSLCipherSuites = cipherSuites;
     }
     
+    /**
+    Enables compression of data.
+     */
+    public func enableCompression(){
+        socket.enableCompression = true;
+    }
+    
+    /**
+    Disables compression of data.
+     */
+    public func disableCompression(){
+        socket.enableCompression = false;
+    }
 }
 
