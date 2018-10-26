@@ -228,14 +228,21 @@ public class ScClient : Listener, WebSocketDelegate {
     Enables compression of data.
      */
     public func enableCompression(){
-        socket.enableCompression = true;
+        socket.enableCompression = true
     }
     
     /**
     Disables compression of data.
      */
     public func disableCompression(){
-        socket.enableCompression = false;
+        socket.enableCompression = false
+    }
+    
+    /**
+     Enables you to ignore SSL cert validation, so a self signed SSL certificate can be used.
+    */
+    public func disableSSLValidation(){
+        socket.disableSSLCertValidation = true
     }
 }
 
