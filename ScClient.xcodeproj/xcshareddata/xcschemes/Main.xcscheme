@@ -37,11 +37,6 @@
                BlueprintName = "ScClientTests"
                ReferencedContainer = "container:ScClient.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "MiscellaneousTest/testShouldSerializeData()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <AdditionalOptions>
