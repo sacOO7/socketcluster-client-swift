@@ -11,7 +11,7 @@ class MiscellaneousTest: XCTestCase {
     
     func testShouldSerializeData() {
         let emitEvent = Model.getEmitEventObject(eventName: "chat", data: "My Sample Data" as AnyObject, messageId: 2)
-        let expectedData = "{\"cid\":2,\"event\":\"chat\",\"data\":\"My Sample Data\"}"
+        let expectedData = "{\"data\":\"My Sample Data\",\"event\":\"chat\",\"cid\":2}"
         XCTAssertEqual(expectedData, emitEvent.toJSONString())
     }
     
