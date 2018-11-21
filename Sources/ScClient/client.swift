@@ -213,6 +213,16 @@ public class ScClient : Listener, WebSocketDelegate {
     public func loadSSLCertificateFromData(data : Data, usePublicKeys : Bool = false) {
         socket.security = SSLSecurity(certs: [SSLCert(data: data)], usePublicKeys: usePublicKeys)
     }
+
+    /**
+     To use an SSL encrypted connection, you need to tell Starscream about the cipher suites your server supports.
+     If you don't know which cipher suites are supported by your server, you can try pointing SSL Labs at it and checking the results.
+      - Parameters:
+        - cipherSuites: list of ciphersuites that will be chosen by client to select encryption algorithm
+    */
+    public func useCipherSuites(cipherSuites : [SSLCipherSuite]) {
+        socket.enabledSSLCipherSuites = cipherSuites;
+    }
     
 }
 
