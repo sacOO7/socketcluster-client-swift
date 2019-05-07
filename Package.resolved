@@ -24,8 +24,17 @@
         "repositoryURL": "https://github.com/daltoniam/Starscream.git",
         "state": {
           "branch": null,
-          "revision": "6e10c04c8387d00f41a17450fa45b51427971022",
-          "version": "3.0.4"
+          "revision": "114e5df9b6251970a069e8f1c0cbb5802759f0a9",
+          "version": "3.0.5"
+        }
+      },
+      {
+        "package": "SSCZLib",
+        "repositoryURL": "https://github.com/daltoniam/zlib-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "83ac8d719a2f3aa775dbdf116a57f56fb2c49abb",
+          "version": "1.1.0"
         }
       },
       {
