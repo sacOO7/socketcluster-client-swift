@@ -2,21 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "SSCommonCrypto",
-        "repositoryURL": "https://github.com/daltoniam/common-crypto-spm",
-        "state": {
-          "branch": null,
-          "revision": "2eb3aff0fb57f92f5722fac5d6d20bf64669ca66",
-          "version": "1.1.0"
-        }
-      },
-      {
         "package": "HandyJSON",
         "repositoryURL": "https://github.com/alibaba/HandyJSON.git",
         "state": {
           "branch": null,
-          "revision": "0eaec774ff559c50bf290c2c457de2320a9dbcfe",
-          "version": "4.2.0"
+          "revision": "dfab665e87f5dd56e16273222718ecd04a9a9d70",
+          "version": "5.0.1"
         }
       },
       {
@@ -24,17 +15,17 @@
         "repositoryURL": "https://github.com/daltoniam/Starscream.git",
         "state": {
           "branch": null,
-          "revision": "114e5df9b6251970a069e8f1c0cbb5802759f0a9",
-          "version": "3.0.5"
+          "revision": "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
+          "version": "3.1.1"
         }
       },
       {
-        "package": "SSCZLib",
-        "repositoryURL": "https://github.com/daltoniam/zlib-spm.git",
+        "package": "swift-nio-zlib-support",
+        "repositoryURL": "https://github.com/apple/swift-nio-zlib-support.git",
         "state": {
           "branch": null,
-          "revision": "83ac8d719a2f3aa775dbdf116a57f56fb2c49abb",
-          "version": "1.1.0"
+          "revision": "37760e9a52030bb9011972c5213c3350fa9d41fd",
+          "version": "1.0.0"
         }
       }
     ]
