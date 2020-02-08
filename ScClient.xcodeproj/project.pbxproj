@@ -5,10 +5,10 @@
    objects = {
       "HandyJSON::HandyJSON" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_76";
+         buildConfigurationList = "OBJ_85";
          buildPhases = (
-            "OBJ_79",
-            "OBJ_113"
+            "OBJ_88",
+            "OBJ_124"
          );
          dependencies = (
          );
@@ -24,9 +24,9 @@
       };
       "HandyJSON::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_115";
+         buildConfigurationList = "OBJ_126";
          buildPhases = (
-            "OBJ_118"
+            "OBJ_129"
          );
          dependencies = (
          );
@@ -37,17 +37,18 @@
       "OBJ_1" = {
          isa = "PBXProject";
          attributes = {
+            LastSwiftMigration = "9999";
             LastUpgradeCheck = "9999";
          };
          buildConfigurationList = "OBJ_2";
          compatibilityVersion = "Xcode 3.2";
-         developmentRegion = "English";
+         developmentRegion = "en";
          hasScannedForEncodings = "0";
          knownRegions = (
             "en"
          );
          mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_69";
+         productRefGroup = "OBJ_73";
          projectDirPath = ".";
          targets = (
             "HandyJSON::HandyJSON",
@@ -62,296 +63,226 @@
          );
       };
       "OBJ_10" = {
-         isa = "PBXFileReference";
-         path = "Listener.swift";
-         sourceTree = "<group>";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11",
+            "OBJ_13",
+            "OBJ_15",
+            "OBJ_17",
+            "OBJ_21"
+         );
+         name = "ScClient";
+         path = "Sources/ScClient";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_100" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_51";
+         fileRef = "OBJ_42";
       };
       "OBJ_101" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_52";
+         fileRef = "OBJ_43";
       };
       "OBJ_102" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_53";
+         fileRef = "OBJ_44";
       };
       "OBJ_103" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_54";
+         fileRef = "OBJ_45";
       };
       "OBJ_104" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_55";
+         fileRef = "OBJ_46";
       };
       "OBJ_105" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_56";
+         fileRef = "OBJ_47";
       };
       "OBJ_106" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_57";
+         fileRef = "OBJ_48";
       };
       "OBJ_107" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_58";
+         fileRef = "OBJ_49";
       };
       "OBJ_108" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_59";
+         fileRef = "OBJ_50";
       };
       "OBJ_109" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_60";
+         fileRef = "OBJ_51";
       };
       "OBJ_11" = {
          isa = "PBXGroup";
          children = (
             "OBJ_12"
          );
-         name = "Models";
-         path = "Models";
+         name = "Emitter";
+         path = "Emitter";
          sourceTree = "<group>";
       };
       "OBJ_110" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_61";
+         fileRef = "OBJ_52";
       };
       "OBJ_111" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_62";
+         fileRef = "OBJ_53";
       };
       "OBJ_112" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_63";
+         fileRef = "OBJ_54";
       };
       "OBJ_113" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_55";
+      };
+      "OBJ_114" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_56";
       };
       "OBJ_115" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_116",
-            "OBJ_117"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_57";
       };
       "OBJ_116" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Debug";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_58";
       };
       "OBJ_117" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_59";
       };
       "OBJ_118" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_119"
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_60";
       };
       "OBJ_119" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_30";
+         fileRef = "OBJ_61";
       };
       "OBJ_12" = {
          isa = "PBXFileReference";
-         path = "Event.swift";
+         path = "Listener.swift";
          sourceTree = "<group>";
       };
+      "OBJ_120" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_62";
+      };
       "OBJ_121" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_63";
+      };
+      "OBJ_122" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_64";
+      };
+      "OBJ_123" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_65";
+      };
+      "OBJ_124" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_126" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_122",
-            "OBJ_123"
+            "OBJ_127",
+            "OBJ_128"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_122" = {
+      "OBJ_127" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
-            );
-            INFOPLIST_FILE = "ScClient.xcodeproj/Main_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4"
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Main";
          };
          name = "Debug";
       };
-      "OBJ_123" = {
+      "OBJ_128" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
-            );
-            INFOPLIST_FILE = "ScClient.xcodeproj/Main_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4"
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Main";
          };
          name = "Release";
       };
-      "OBJ_124" = {
+      "OBJ_129" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_125"
+            "OBJ_130"
          );
-      };
-      "OBJ_125" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_21";
-      };
-      "OBJ_126" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_127",
-            "OBJ_128",
-            "OBJ_129"
-         );
-      };
-      "OBJ_127" = {
-         isa = "PBXBuildFile";
-         fileRef = "ScClient::ScClient::Product";
-      };
-      "OBJ_128" = {
-         isa = "PBXBuildFile";
-         fileRef = "HandyJSON::HandyJSON::Product";
-      };
-      "OBJ_129" = {
-         isa = "PBXBuildFile";
-         fileRef = "Starscream::Starscream::Product";
       };
       "OBJ_13" = {
          isa = "PBXGroup";
          children = (
             "OBJ_14"
          );
-         name = "Parser";
-         path = "Parser";
+         name = "Models";
+         path = "Models";
          sourceTree = "<group>";
       };
       "OBJ_130" = {
-         isa = "PBXTargetDependency";
-         target = "ScClient::ScClient";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_30";
       };
       "OBJ_132" = {
-         isa = "PBXTargetDependency";
-         target = "HandyJSON::HandyJSON";
-      };
-      "OBJ_133" = {
-         isa = "PBXTargetDependency";
-         target = "Starscream::Starscream";
-      };
-      "OBJ_135" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_136",
-            "OBJ_137"
+            "OBJ_133",
+            "OBJ_134"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_136" = {
+      "OBJ_133" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
             );
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
             );
-            INFOPLIST_FILE = "ScClient.xcodeproj/ScClient_Info.plist";
+            INFOPLIST_FILE = "ScClient.xcodeproj/Main_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             OTHER_CFLAGS = (
                "$(inherited)"
@@ -362,35 +293,32 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "ScClient";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "ScClient";
+            TARGET_NAME = "Main";
          };
          name = "Debug";
       };
-      "OBJ_137" = {
+      "OBJ_134" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
             );
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
             );
-            INFOPLIST_FILE = "ScClient.xcodeproj/ScClient_Info.plist";
+            INFOPLIST_FILE = "ScClient.xcodeproj/Main_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             OTHER_CFLAGS = (
                "$(inherited)"
@@ -401,181 +329,224 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "ScClient";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "ScClient";
+            TARGET_NAME = "Main";
          };
          name = "Release";
       };
-      "OBJ_138" = {
+      "OBJ_135" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_139",
-            "OBJ_140",
-            "OBJ_141",
-            "OBJ_142",
-            "OBJ_143",
-            "OBJ_144",
-            "OBJ_145"
+            "OBJ_136"
          );
+      };
+      "OBJ_136" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_9";
+      };
+      "OBJ_137" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_138",
+            "OBJ_139",
+            "OBJ_140"
+         );
+      };
+      "OBJ_138" = {
+         isa = "PBXBuildFile";
+         fileRef = "ScClient::ScClient::Product";
       };
       "OBJ_139" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_10";
+         fileRef = "HandyJSON::HandyJSON::Product";
       };
       "OBJ_14" = {
          isa = "PBXFileReference";
-         path = "Parser.swift";
+         path = "Event.swift";
          sourceTree = "<group>";
       };
       "OBJ_140" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_12";
+         fileRef = "Starscream::Starscream::Product";
       };
       "OBJ_141" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
-      };
-      "OBJ_142" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
+         isa = "PBXTargetDependency";
+         target = "ScClient::ScClient";
       };
       "OBJ_143" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_17";
+         isa = "PBXTargetDependency";
+         target = "HandyJSON::HandyJSON";
       };
       "OBJ_144" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
-      };
-      "OBJ_145" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
+         isa = "PBXTargetDependency";
+         target = "Starscream::Starscream";
       };
       "OBJ_146" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
+         isa = "XCConfigurationList";
+         buildConfigurations = (
             "OBJ_147",
             "OBJ_148"
          );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
       };
       "OBJ_147" = {
-         isa = "PBXBuildFile";
-         fileRef = "HandyJSON::HandyJSON::Product";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
+            );
+            INFOPLIST_FILE = "ScClient.xcodeproj/ScClient_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ScClient";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "ScClient";
+         };
+         name = "Debug";
       };
       "OBJ_148" = {
-         isa = "PBXBuildFile";
-         fileRef = "Starscream::Starscream::Product";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
+            );
+            INFOPLIST_FILE = "ScClient.xcodeproj/ScClient_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ScClient";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "ScClient";
+         };
+         name = "Release";
       };
       "OBJ_149" = {
-         isa = "PBXTargetDependency";
-         target = "HandyJSON::HandyJSON";
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_150",
+            "OBJ_151",
+            "OBJ_152",
+            "OBJ_153",
+            "OBJ_154",
+            "OBJ_155",
+            "OBJ_156"
+         );
       };
       "OBJ_15" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_16",
-            "OBJ_17",
-            "OBJ_18"
+            "OBJ_16"
          );
-         name = "Utils";
-         path = "Utils";
+         name = "Parser";
+         path = "Parser";
          sourceTree = "<group>";
       };
       "OBJ_150" = {
-         isa = "PBXTargetDependency";
-         target = "Starscream::Starscream";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_151" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
       };
       "OBJ_152" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_153",
-            "OBJ_154"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
       };
       "OBJ_153" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Debug";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
       };
       "OBJ_154" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
       };
       "OBJ_155" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_156"
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
       };
       "OBJ_156" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_157" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_158",
+            "OBJ_159"
+         );
       };
       "OBJ_158" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_159",
-            "OBJ_160"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "HandyJSON::HandyJSON::Product";
       };
       "OBJ_159" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Debug";
+         isa = "PBXBuildFile";
+         fileRef = "Starscream::Starscream::Product";
       };
       "OBJ_16" = {
          isa = "PBXFileReference";
-         path = "AtomicInteger.swift";
+         path = "Parser.swift";
          sourceTree = "<group>";
       };
       "OBJ_160" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Release";
+         isa = "PBXTargetDependency";
+         target = "HandyJSON::HandyJSON";
       };
       "OBJ_161" = {
          isa = "PBXTargetDependency";
-         target = "ScClient::ScClientTests";
+         target = "Starscream::Starscream";
       };
       "OBJ_163" = {
          isa = "XCConfigurationList";
@@ -589,43 +560,101 @@
       "OBJ_164" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
-            );
-            INFOPLIST_FILE = "ScClient.xcodeproj/ScClientTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4"
             );
             SWIFT_VERSION = "4.0";
-            TARGET_NAME = "ScClientTests";
          };
          name = "Debug";
       };
       "OBJ_165" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4"
+            );
+            SWIFT_VERSION = "4.0";
+         };
+         name = "Release";
+      };
+      "OBJ_166" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_167"
+         );
+      };
+      "OBJ_167" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_169" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_170",
+            "OBJ_171"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_17" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_18",
+            "OBJ_19",
+            "OBJ_20"
+         );
+         name = "Utils";
+         path = "Utils";
+         sourceTree = "<group>";
+      };
+      "OBJ_170" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_171" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_172" = {
+         isa = "PBXTargetDependency";
+         target = "ScClient::ScClientTests";
+      };
+      "OBJ_174" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_175",
+            "OBJ_176"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_175" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
             CLANG_ENABLE_MODULES = "YES";
             EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
@@ -634,8 +663,43 @@
             );
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
+            );
+            INFOPLIST_FILE = "ScClient.xcodeproj/ScClientTests_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.0";
+            TARGET_NAME = "ScClientTests";
+         };
+         name = "Debug";
+      };
+      "OBJ_176" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
             );
             INFOPLIST_FILE = "ScClient.xcodeproj/ScClientTests_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
@@ -660,78 +724,83 @@
          };
          name = "Release";
       };
-      "OBJ_166" = {
+      "OBJ_177" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_167",
-            "OBJ_168",
-            "OBJ_169",
-            "OBJ_170"
+            "OBJ_178",
+            "OBJ_179",
+            "OBJ_180",
+            "OBJ_181"
          );
       };
-      "OBJ_167" = {
+      "OBJ_178" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_24";
       };
-      "OBJ_168" = {
+      "OBJ_179" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_25";
       };
-      "OBJ_169" = {
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "AtomicInteger.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_180" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_26";
       };
-      "OBJ_17" = {
+      "OBJ_181" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_27";
+      };
+      "OBJ_182" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_183",
+            "OBJ_184",
+            "OBJ_185"
+         );
+      };
+      "OBJ_183" = {
+         isa = "PBXBuildFile";
+         fileRef = "ScClient::ScClient::Product";
+      };
+      "OBJ_184" = {
+         isa = "PBXBuildFile";
+         fileRef = "HandyJSON::HandyJSON::Product";
+      };
+      "OBJ_185" = {
+         isa = "PBXBuildFile";
+         fileRef = "Starscream::Starscream::Product";
+      };
+      "OBJ_186" = {
+         isa = "PBXTargetDependency";
+         target = "ScClient::ScClient";
+      };
+      "OBJ_187" = {
+         isa = "PBXTargetDependency";
+         target = "HandyJSON::HandyJSON";
+      };
+      "OBJ_188" = {
+         isa = "PBXTargetDependency";
+         target = "Starscream::Starscream";
+      };
+      "OBJ_189" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_190",
+            "OBJ_191"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_19" = {
          isa = "PBXFileReference";
          path = "ClientUtils.swift";
          sourceTree = "<group>";
       };
-      "OBJ_170" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_27";
-      };
-      "OBJ_171" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_172",
-            "OBJ_173",
-            "OBJ_174"
-         );
-      };
-      "OBJ_172" = {
-         isa = "PBXBuildFile";
-         fileRef = "ScClient::ScClient::Product";
-      };
-      "OBJ_173" = {
-         isa = "PBXBuildFile";
-         fileRef = "HandyJSON::HandyJSON::Product";
-      };
-      "OBJ_174" = {
-         isa = "PBXBuildFile";
-         fileRef = "Starscream::Starscream::Product";
-      };
-      "OBJ_175" = {
-         isa = "PBXTargetDependency";
-         target = "ScClient::ScClient";
-      };
-      "OBJ_176" = {
-         isa = "PBXTargetDependency";
-         target = "HandyJSON::HandyJSON";
-      };
-      "OBJ_177" = {
-         isa = "PBXTargetDependency";
-         target = "Starscream::Starscream";
-      };
-      "OBJ_178" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_179",
-            "OBJ_180"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_179" = {
+      "OBJ_190" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -741,8 +810,7 @@
             );
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
             );
             INFOPLIST_FILE = "ScClient.xcodeproj/Starscream_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
@@ -765,17 +833,12 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "3.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "Starscream";
          };
          name = "Debug";
       };
-      "OBJ_18" = {
-         isa = "PBXFileReference";
-         path = "Miscellaneous.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_180" = {
+      "OBJ_191" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -785,8 +848,7 @@
             );
             HEADER_SEARCH_PATHS = (
                "$(inherited)",
-               "$(SRCROOT)/.build/checkouts/common-crypto-spm--132958532151328779",
-               "$(SRCROOT)/.build/checkouts/zlib-spm.git-7042465659040932026"
+               "$(SRCROOT)/.build/checkouts/swift-nio-zlib-support"
             );
             INFOPLIST_FILE = "ScClient.xcodeproj/Starscream_Info.plist";
             LD_RUNPATH_SEARCH_PATHS = (
@@ -809,95 +871,49 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "3.0";
+            SWIFT_VERSION = "4.2";
             TARGET_NAME = "Starscream";
          };
          name = "Release";
       };
-      "OBJ_181" = {
+      "OBJ_192" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_182",
-            "OBJ_183",
-            "OBJ_184"
+            "OBJ_193",
+            "OBJ_194",
+            "OBJ_195",
+            "OBJ_196"
          );
       };
-      "OBJ_182" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_66";
-      };
-      "OBJ_183" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_67";
-      };
-      "OBJ_184" = {
+      "OBJ_193" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_68";
       };
-      "OBJ_185" = {
+      "OBJ_194" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_69";
+      };
+      "OBJ_195" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_70";
+      };
+      "OBJ_196" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_71";
+      };
+      "OBJ_197" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
          );
       };
-      "OBJ_187" = {
+      "OBJ_199" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_188",
-            "OBJ_189"
+            "OBJ_200",
+            "OBJ_201"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
-      };
-      "OBJ_188" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_189" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Release";
-      };
-      "OBJ_19" = {
-         isa = "PBXFileReference";
-         path = "client.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_190" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_191"
-         );
-      };
-      "OBJ_191" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_65";
       };
       "OBJ_2" = {
          isa = "XCConfigurationList";
@@ -909,17 +925,63 @@
          defaultConfigurationName = "Release";
       };
       "OBJ_20" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_21"
+         isa = "PBXFileReference";
+         path = "Miscellaneous.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_200" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Debug";
+      };
+      "OBJ_201" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Release";
+      };
+      "OBJ_202" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_203"
          );
-         name = "Main";
-         path = "Sources/Main";
-         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_203" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_72";
       };
       "OBJ_21" = {
          isa = "PBXFileReference";
-         path = "main.swift";
+         path = "client.swift";
          sourceTree = "<group>";
       };
       "OBJ_22" = {
@@ -967,7 +1029,7 @@
          isa = "PBXGroup";
          children = (
             "OBJ_29",
-            "OBJ_64"
+            "OBJ_66"
          );
          name = "Dependencies";
          path = "";
@@ -1009,10 +1071,12 @@
             "OBJ_60",
             "OBJ_61",
             "OBJ_62",
-            "OBJ_63"
+            "OBJ_63",
+            "OBJ_64",
+            "OBJ_65"
          );
-         name = "HandyJSON 4.2.0";
-         path = ".build/checkouts/HandyJSON.git--60814748593434692/Source";
+         name = "HandyJSON 5.0.1";
+         path = ".build/checkouts/HandyJSON/Source";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_3" = {
@@ -1026,12 +1090,14 @@
             ENABLE_NS_ASSERTIONS = "YES";
             GCC_OPTIMIZATION_LEVEL = "0";
             GCC_PREPROCESSOR_DEFINITIONS = (
-               "DEBUG=1",
-               "$(inherited)"
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
             );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             ONLY_ACTIVE_ARCH = "YES";
             OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
                "-DXcode"
             );
             PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1046,6 +1112,7 @@
                "watchsimulator"
             );
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
                "SWIFT_PACKAGE",
                "DEBUG"
             );
@@ -1058,7 +1125,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/in-sachins/Documents/SwiftProjects/socketcluster-client-swift/.build/checkouts/HandyJSON.git--60814748593434692/Package.swift";
+         path = "/Users/sachinshinde/SwiftProjects/socketcluster-client-swift/.build/checkouts/HandyJSON/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_31" = {
@@ -1115,8 +1182,13 @@
             DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
             DYLIB_INSTALL_NAME_BASE = "@rpath";
             GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
                "-DXcode"
             );
             PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1131,6 +1203,7 @@
                "watchsimulator"
             );
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
                "SWIFT_PACKAGE"
             );
             SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1175,17 +1248,17 @@
       };
       "OBJ_47" = {
          isa = "PBXFileReference";
-         path = "HelpingMapper.swift";
+         path = "FieldDescriptor.swift";
          sourceTree = "<group>";
       };
       "OBJ_48" = {
          isa = "PBXFileReference";
-         path = "HexColorTransform.swift";
+         path = "HelpingMapper.swift";
          sourceTree = "<group>";
       };
       "OBJ_49" = {
          isa = "PBXFileReference";
-         path = "ISO8601DateTransform.swift";
+         path = "HexColorTransform.swift";
          sourceTree = "<group>";
       };
       "OBJ_5" = {
@@ -1195,59 +1268,64 @@
             "OBJ_7",
             "OBJ_22",
             "OBJ_28",
-            "OBJ_69"
+            "OBJ_73",
+            "OBJ_79",
+            "OBJ_80",
+            "OBJ_81",
+            "OBJ_82",
+            "OBJ_83"
          );
          path = "";
          sourceTree = "<group>";
       };
       "OBJ_50" = {
          isa = "PBXFileReference";
-         path = "Logger.swift";
+         path = "ISO8601DateTransform.swift";
          sourceTree = "<group>";
       };
       "OBJ_51" = {
          isa = "PBXFileReference";
-         path = "Measuable.swift";
+         path = "Logger.swift";
          sourceTree = "<group>";
       };
       "OBJ_52" = {
          isa = "PBXFileReference";
-         path = "Metadata.swift";
+         path = "MangledName.swift";
          sourceTree = "<group>";
       };
       "OBJ_53" = {
          isa = "PBXFileReference";
-         path = "NSDecimalNumberTransform.swift";
+         path = "Measuable.swift";
          sourceTree = "<group>";
       };
       "OBJ_54" = {
          isa = "PBXFileReference";
-         path = "OtherExtension.swift";
+         path = "Metadata.swift";
          sourceTree = "<group>";
       };
       "OBJ_55" = {
          isa = "PBXFileReference";
-         path = "PointerType.swift";
+         path = "NSDecimalNumberTransform.swift";
          sourceTree = "<group>";
       };
       "OBJ_56" = {
          isa = "PBXFileReference";
-         path = "Properties.swift";
+         path = "OtherExtension.swift";
          sourceTree = "<group>";
       };
       "OBJ_57" = {
          isa = "PBXFileReference";
-         path = "PropertyInfo.swift";
+         path = "PointerType.swift";
          sourceTree = "<group>";
       };
       "OBJ_58" = {
          isa = "PBXFileReference";
-         path = "ReflectionHelper.swift";
+         path = "Properties.swift";
          sourceTree = "<group>";
       };
       "OBJ_59" = {
          isa = "PBXFileReference";
-         path = "Serializer.swift";
+         path = "PropertyInfo.swift";
          sourceTree = "<group>";
       };
       "OBJ_6" = {
@@ -1258,91 +1336,150 @@
       };
       "OBJ_60" = {
          isa = "PBXFileReference";
-         path = "TransformOf.swift";
+         path = "ReflectionHelper.swift";
          sourceTree = "<group>";
       };
       "OBJ_61" = {
          isa = "PBXFileReference";
-         path = "TransformType.swift";
+         path = "Serializer.swift";
          sourceTree = "<group>";
       };
       "OBJ_62" = {
          isa = "PBXFileReference";
-         path = "Transformable.swift";
+         path = "TransformOf.swift";
          sourceTree = "<group>";
       };
       "OBJ_63" = {
          isa = "PBXFileReference";
-         path = "URLTransform.swift";
+         path = "TransformType.swift";
          sourceTree = "<group>";
       };
       "OBJ_64" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_65",
-            "OBJ_66",
-            "OBJ_67",
-            "OBJ_68"
-         );
-         name = "Starscream 3.0.5";
-         path = ".build/checkouts/Starscream.git--8239888854797068891/Sources";
-         sourceTree = "SOURCE_ROOT";
+         isa = "PBXFileReference";
+         path = "Transformable.swift";
+         sourceTree = "<group>";
       };
       "OBJ_65" = {
          isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/in-sachins/Documents/SwiftProjects/socketcluster-client-swift/.build/checkouts/Starscream.git--8239888854797068891/Package.swift";
+         path = "URLTransform.swift";
          sourceTree = "<group>";
       };
       "OBJ_66" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_67",
+            "OBJ_72"
+         );
+         name = "Starscream 3.1.1";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_67" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_68",
+            "OBJ_69",
+            "OBJ_70",
+            "OBJ_71"
+         );
+         name = "Starscream";
+         path = ".build/checkouts/Starscream/Sources/Starscream";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_68" = {
          isa = "PBXFileReference";
          path = "Compression.swift";
          sourceTree = "<group>";
       };
-      "OBJ_67" = {
-         isa = "PBXFileReference";
-         path = "SSLSecurity.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_68" = {
-         isa = "PBXFileReference";
-         path = "WebSocket.swift";
-         sourceTree = "<group>";
-      };
       "OBJ_69" = {
-         isa = "PBXGroup";
-         children = (
-            "ScClient::Main::Product",
-            "ScClient::ScClient::Product",
-            "HandyJSON::HandyJSON::Product",
-            "Starscream::Starscream::Product",
-            "ScClient::ScClientTests::Product"
-         );
-         name = "Products";
-         path = "";
-         sourceTree = "BUILT_PRODUCTS_DIR";
+         isa = "PBXFileReference";
+         path = "SSLClientCertificate.swift";
+         sourceTree = "<group>";
       };
       "OBJ_7" = {
          isa = "PBXGroup";
          children = (
             "OBJ_8",
-            "OBJ_20"
+            "OBJ_10"
          );
          name = "Sources";
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_76" = {
+      "OBJ_70" = {
+         isa = "PBXFileReference";
+         path = "SSLSecurity.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_71" = {
+         isa = "PBXFileReference";
+         path = "WebSocket.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_72" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Users/sachinshinde/SwiftProjects/socketcluster-client-swift/.build/checkouts/Starscream/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_73" = {
+         isa = "PBXGroup";
+         children = (
+            "ScClient::Main::Product",
+            "ScClient::ScClient::Product",
+            "ScClient::ScClientTests::Product",
+            "Starscream::Starscream::Product",
+            "HandyJSON::HandyJSON::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_79" = {
+         isa = "PBXFileReference";
+         path = "build";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9"
+         );
+         name = "Main";
+         path = "Sources/Main";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_80" = {
+         isa = "PBXFileReference";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_82" = {
+         isa = "PBXFileReference";
+         path = "commands.txt";
+         sourceTree = "<group>";
+      };
+      "OBJ_83" = {
+         isa = "PBXFileReference";
+         path = "ScClient.podspec";
+         sourceTree = "<group>";
+      };
+      "OBJ_85" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_77",
-            "OBJ_78"
+            "OBJ_86",
+            "OBJ_87"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_77" = {
+      "OBJ_86" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -1374,12 +1511,12 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "3.0";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "HandyJSON";
          };
          name = "Debug";
       };
-      "OBJ_78" = {
+      "OBJ_87" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
             ENABLE_TESTABILITY = "YES";
@@ -1411,23 +1548,14 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "3.0";
+            SWIFT_VERSION = "4.0";
             TARGET_NAME = "HandyJSON";
          };
          name = "Release";
       };
-      "OBJ_79" = {
+      "OBJ_88" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_80",
-            "OBJ_81",
-            "OBJ_82",
-            "OBJ_83",
-            "OBJ_84",
-            "OBJ_85",
-            "OBJ_86",
-            "OBJ_87",
-            "OBJ_88",
             "OBJ_89",
             "OBJ_90",
             "OBJ_91",
@@ -1451,122 +1579,80 @@
             "OBJ_109",
             "OBJ_110",
             "OBJ_111",
-            "OBJ_112"
+            "OBJ_112",
+            "OBJ_113",
+            "OBJ_114",
+            "OBJ_115",
+            "OBJ_116",
+            "OBJ_117",
+            "OBJ_118",
+            "OBJ_119",
+            "OBJ_120",
+            "OBJ_121",
+            "OBJ_122",
+            "OBJ_123"
          );
-      };
-      "OBJ_8" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_9",
-            "OBJ_11",
-            "OBJ_13",
-            "OBJ_15",
-            "OBJ_19"
-         );
-         name = "ScClient";
-         path = "Sources/ScClient";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_80" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_31";
-      };
-      "OBJ_81" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_32";
-      };
-      "OBJ_82" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
-      };
-      "OBJ_83" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_84" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_35";
-      };
-      "OBJ_85" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_36";
-      };
-      "OBJ_86" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_37";
-      };
-      "OBJ_87" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
-      };
-      "OBJ_88" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
       };
       "OBJ_89" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_40";
+         fileRef = "OBJ_31";
       };
       "OBJ_9" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_10"
-         );
-         name = "Emitter";
-         path = "Emitter";
+         isa = "PBXFileReference";
+         path = "main.swift";
          sourceTree = "<group>";
       };
       "OBJ_90" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_41";
+         fileRef = "OBJ_32";
       };
       "OBJ_91" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_42";
+         fileRef = "OBJ_33";
       };
       "OBJ_92" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_43";
+         fileRef = "OBJ_34";
       };
       "OBJ_93" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_44";
+         fileRef = "OBJ_35";
       };
       "OBJ_94" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_45";
+         fileRef = "OBJ_36";
       };
       "OBJ_95" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_46";
+         fileRef = "OBJ_37";
       };
       "OBJ_96" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_47";
+         fileRef = "OBJ_38";
       };
       "OBJ_97" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_48";
+         fileRef = "OBJ_39";
       };
       "OBJ_98" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_49";
+         fileRef = "OBJ_40";
       };
       "OBJ_99" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_50";
+         fileRef = "OBJ_41";
       };
       "ScClient::Main" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_121";
+         buildConfigurationList = "OBJ_132";
          buildPhases = (
-            "OBJ_124",
-            "OBJ_126"
+            "OBJ_135",
+            "OBJ_137"
          );
          dependencies = (
-            "OBJ_130",
-            "OBJ_132",
-            "OBJ_133"
+            "OBJ_141",
+            "OBJ_143",
+            "OBJ_144"
          );
          name = "Main";
          productName = "Main";
@@ -1580,14 +1666,14 @@
       };
       "ScClient::ScClient" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_135";
+         buildConfigurationList = "OBJ_146";
          buildPhases = (
-            "OBJ_138",
-            "OBJ_146"
+            "OBJ_149",
+            "OBJ_157"
          );
          dependencies = (
-            "OBJ_149",
-            "OBJ_150"
+            "OBJ_160",
+            "OBJ_161"
          );
          name = "ScClient";
          productName = "ScClient";
@@ -1601,26 +1687,26 @@
       };
       "ScClient::ScClientPackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_158";
+         buildConfigurationList = "OBJ_169";
          buildPhases = (
          );
          dependencies = (
-            "OBJ_161"
+            "OBJ_172"
          );
          name = "ScClientPackageTests";
          productName = "ScClientPackageTests";
       };
       "ScClient::ScClientTests" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_163";
+         buildConfigurationList = "OBJ_174";
          buildPhases = (
-            "OBJ_166",
-            "OBJ_171"
+            "OBJ_177",
+            "OBJ_182"
          );
          dependencies = (
-            "OBJ_175",
-            "OBJ_176",
-            "OBJ_177"
+            "OBJ_186",
+            "OBJ_187",
+            "OBJ_188"
          );
          name = "ScClientTests";
          productName = "ScClientTests";
@@ -1634,9 +1720,9 @@
       };
       "ScClient::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_152";
+         buildConfigurationList = "OBJ_163";
          buildPhases = (
-            "OBJ_155"
+            "OBJ_166"
          );
          dependencies = (
          );
@@ -1646,10 +1732,10 @@
       };
       "Starscream::Starscream" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_178";
+         buildConfigurationList = "OBJ_189";
          buildPhases = (
-            "OBJ_181",
-            "OBJ_185"
+            "OBJ_192",
+            "OBJ_197"
          );
          dependencies = (
          );
@@ -1665,9 +1751,9 @@
       };
       "Starscream::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_187";
+         buildConfigurationList = "OBJ_199";
          buildPhases = (
-            "OBJ_190"
+            "OBJ_202"
          );
          dependencies = (
          );

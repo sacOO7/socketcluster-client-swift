@@ -1,0 +1,16 @@
+# For a detailed guide to building and testing on iOS, read the docs:
+# https://circleci.com/docs/2.0/testing-ios/
+
+version: 2.1
+
+jobs:
+  build-test:
+
+    macos:
+      xcode: 11.3.1 # Specify the Xcode version to use
+
+    steps:
+      - checkout
+      - run: swift package resolve # install all dependencies
+      - run: swift build # build the package
+      - run: swift test  #test the package
