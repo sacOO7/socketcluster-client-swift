@@ -54,7 +54,6 @@ class ParserTest: XCTestCase {
             XCTAssertEqual( "This is a sample error", result.error as! String)
         }
         
-        
     }
     
 }

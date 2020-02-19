@@ -127,7 +127,7 @@ class Model  {
     }
     
     public static func getUnsubscribeEventObject(channelName : String, messageId : Int) -> EmitEvent{
-        return EmitEvent(event: "#unsubscribe", data: Channel(channel: channelName, data :nil) as AnyObject, cid: messageId)
+        return EmitEvent(event: "#unsubscribe", data: channelName as AnyObject, cid: messageId)
     }
     
     public static func getPublishEventObject(channelName : String, data : AnyObject?, messageId : Int) -> EmitEvent{
