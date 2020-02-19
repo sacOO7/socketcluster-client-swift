@@ -33,7 +33,7 @@ pod 'ScClient'
  ```swift
      dependencies: [
      	// other dependencies 
-    	.package(url: "https://github.com/sacOO7/ScClient", from: "2.0.0")
+    	.package(url: "https://github.com/sacOO7/ScClient", from: "2.0.1")
 	]
  ```
 - To use the library add this to target dependencies
