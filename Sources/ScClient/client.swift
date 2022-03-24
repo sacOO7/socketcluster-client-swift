@@ -2,7 +2,7 @@ import Starscream
 import Foundation
 
 
-public class ScClient : Listener, WebSocketDelegate {
+open class ScClient : Listener, WebSocketDelegate {
     
     var authToken : String?
     var url : String?
