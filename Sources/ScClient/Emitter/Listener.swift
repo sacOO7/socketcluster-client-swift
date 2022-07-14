@@ -6,7 +6,7 @@
 //
 
 import Foundation
-open public class Listener {
+open class Listener {
     open var emitAckListener : [Int : (String, (String, AnyObject?, AnyObject? ) -> Void )]
     open var onListener :[String : (String, AnyObject?) -> Void]
     open var onAckListener : [String: (String, AnyObject?, (AnyObject?, AnyObject?) -> Void ) -> Void]
