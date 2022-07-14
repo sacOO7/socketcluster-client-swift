@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SocketClusterClient"
-  s.version      = "2.0.3"
+  s.version      = "2.0.4"
   s.summary      = "A socketcluster client for iOS and OSX."
   s.swift_version = '4.0'
 
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "sacOO7" => "sachinshinde7676@gmail.com" }
+  s.author             = "benedictchen"
   # Or just: s.author    = "sacOO7"
   # s.authors            = { "sacOO7" => "sachinshinde7676@gmail.com" }
   # s.social_media_url   = "http://twitter.com/sacOO7"
