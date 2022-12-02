@@ -6,10 +6,10 @@
 //
 
 import Foundation
-public class Listener {
-    var emitAckListener : [Int : (String, (String, AnyObject?, AnyObject? ) -> Void )]
-    var onListener :[String : (String, AnyObject?) -> Void]
-    var onAckListener : [String: (String, AnyObject?, (AnyObject?, AnyObject?) -> Void ) -> Void]
+open class Listener {
+    open var emitAckListener : [Int : (String, (String, AnyObject?, AnyObject? ) -> Void )]
+    open var onListener :[String : (String, AnyObject?) -> Void]
+    open var onAckListener : [String: (String, AnyObject?, (AnyObject?, AnyObject?) -> Void ) -> Void]
 
     public init() {
         emitAckListener = [Int : (String, (String, AnyObject?, AnyObject? ) -> Void )]()
@@ -32,6 +32,10 @@ public class Listener {
     
     func putOnListener(eventName : String, onListener: @escaping (String, AnyObject?) -> Void) {
         self.onListener[eventName] = onListener
+    }
+    
+    func removeListener(eventName: String) {
+        self.onListener.removeValue(forKey: eventName)
     }
     
     func handleOnListener (eventName : String, data : AnyObject?) {

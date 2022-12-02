@@ -2,7 +2,7 @@ import Starscream
 import Foundation
 
 
-public class ScClient : Listener, WebSocketDelegate {
+open class ScClient : Listener, WebSocketDelegate {
     
     var authToken : String?
     var url : String?
@@ -68,13 +68,12 @@ public class ScClient : Listener, WebSocketDelegate {
                         authToken = ClientUtils.getAuthToken(message: messageObject)
                         self.onSetAuthentication?(self, authToken)
                     case .ackReceive:
-                        
-                        handleEmitAck(id: rid!, error: error as AnyObject, data: data as AnyObject)
+                        handleEmitAck(id: rid ?? -1, error: error as AnyObject, data: data as AnyObject)
                     case .event:
-                        if hasEventAck(eventName: eventName!) {
-                            handleOnAckListener(eventName: eventName!, data: data as AnyObject, ack: self.ack(cid: cid!))
+                        if hasEventAck(eventName: eventName ?? "") {
+                            handleOnAckListener(eventName: eventName ?? "", data: data as AnyObject, ack: self.ack(cid: cid!))
                         } else {
-                            handleOnListener(eventName: eventName!, data: data as AnyObject)
+                            handleOnListener(eventName: eventName ?? "", data: data as AnyObject)
                         }
                     
                     }
