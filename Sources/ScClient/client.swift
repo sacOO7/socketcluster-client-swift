@@ -47,6 +47,8 @@ public class ScClient : Listener, WebSocketDelegate {
     public func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         if (text == "") {
             socket.write(string: "")
+        } else if (text == "#1") {
+            socket.write(string: "#2")
         } else {
             if let messageObject = JSONConverter.deserializeString(message: text) {
                 if let (data, rid, cid, eventName, error) = Parser.getMessageDetails(myMessage: messageObject) {
